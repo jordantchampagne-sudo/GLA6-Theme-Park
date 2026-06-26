@@ -95,7 +95,7 @@ function readOperation(callback){
 function createOperation(callback){
   db.run(
     `
-    INSERT INTO rides
+    INSERT OR REPLACE INTO rides
     (
       ride_name,
       description,
