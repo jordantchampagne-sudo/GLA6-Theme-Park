@@ -1,0 +1,19 @@
+{
+  "name": "gla6-theme-park",
+  "version": "1.0.0",
+  "description": "GLA 6: CRUD Operations with SQLite - Theme Park Database",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "crud",
+    "sqlite",
+    "database"
+  ],
+  "author": "Jordan Champagne",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite3": "^6.0.1"
+  }
+}
