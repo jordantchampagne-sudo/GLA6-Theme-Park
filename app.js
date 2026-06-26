@@ -1,5 +1,7 @@
 /**
  * GLA 6 - INDIVIDUAL ACTIVITY
+ * AI Use Declaration: GitHub Copilot was used to help draft code, explain parts of the assignment by drawing parallels to PLC programming and robotics principles, and help fix errors and refine the code.
+ * Technical background: PLC programming and robotics systems.
  *
  * Solve the errors and execute the 4 basic CRUD commands.
  *
