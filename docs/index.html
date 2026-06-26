@@ -1,148 +1,163 @@
 <!doctype html>
-<html lang="en">
+<html lang=en>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GLA6 Theme Park CRUD - Portfolio Demo</title>
-  <style>
-    :root {
-      --bg: #f5f7fa;
-      --panel: #ffffff;
-      --ink: #1f2d3d;
-      --muted: #52606d;
-      --brand: #1f4e79;
-      --ok-bg: #e9f9ef;
-      --ok-ink: #216e39;
-      --border: #d9e2ec;
-      --code-bg: #0f1720;
-      --code-ink: #d8f3dc;
-    }
-    body {
-      margin: 0;
-      background: radial-gradient(circle at 20% 0%, #e8eff7 0%, var(--bg) 55%);
-      color: var(--ink);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      padding: 28px;
-    }
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-    header {
-      padding: 22px 26px;
-      background: linear-gradient(120deg, var(--brand), #2b6aa3);
-      color: #fff;
-    }
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1.1;
-    }
-    .sub {
-      margin-top: 7px;
-      opacity: 0.92;
-      font-size: 14px;
-    }
-    section {
-      padding: 20px 26px;
-      border-top: 1px solid var(--border);
-    }
-    .meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(260px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .pill {
-      border: 1px solid #b8d8c5;
-      background: var(--ok-bg);
-      color: var(--ok-ink);
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 0;
-    }
-    pre {
-      margin: 12px 0 0;
-      background: var(--code-bg);
-      color: var(--code-ink);
-      border-radius: 10px;
-      padding: 16px;
-      font-family: Consolas, "Courier New", monospace;
-      font-size: 13px;
-      line-height: 1.4;
-      max-height: 62vh;
-      overflow: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-    .foot {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 12px;
-    }
-  </style>
+ <meta charset=UTF-8 />
+ <meta name=viewport content=width=device-width, initial-scale=1.0 />
+ <title>GLA6 Theme Park CRUD - Portfolio Demo</title>
+ <style>
+ :root {
+ --colour-primary: #18322a;
+ --colour-primary-strong: #10231d;
+ --colour-accent: #d97f2b;
+ --colour-accent-soft: rgba(217, 127, 43, 0.14);
+ --colour-bg: #f4efe6;
+ --colour-surface: rgba(255, 255, 255, 0.92);
+ --colour-text: #24312c;
+ --colour-muted: #63716d;
+ --colour-ok-bg: #dff6e5;
+ --colour-ok-text: #155724;
+ --colour-border: rgba(72, 95, 84, 0.18);
+ --shadow-soft: 0 12px 28px rgba(19, 35, 28, 0.08);
+ }
+
+ * { box-sizing: border-box; }
+
+ body {
+ margin: 0;
+ background:
+ radial-gradient(circle at top left, rgba(217, 127, 43, 0.16), transparent 28%),
+ radial-gradient(circle at right 8%, rgba(24, 50, 42, 0.12), transparent 30%),
+ linear-gradient(180deg, #faf6ef 0%, var(--colour-bg) 100%);
+ color: var(--colour-text);
+ font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+ padding: 28px;
+ }
+
+ .wrap {
+ max-width: 1080px;
+ margin: 0 auto;
+ background: var(--colour-surface);
+ border: 1px solid var(--colour-border);
+ border-radius: 16px;
+ overflow: hidden;
+ box-shadow: var(--shadow-soft);
+ backdrop-filter: blur(8px);
+ }
+
+ header {
+ padding: 22px 26px;
+ background: linear-gradient(135deg, var(--colour-primary-strong), var(--colour-primary));
+ color: #fff;
+ }
+
+ h1 { margin: 0; font-size: 28px; line-height: 1.12; }
+ .sub { margin-top: 7px; opacity: 0.94; font-size: 14px; }
+ section { padding: 20px 26px; border-top: 1px solid var(--colour-border); }
+
+ .meta {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(260px, 1fr));
+ gap: 10px;
+ margin-top: 10px;
+ }
+
+ .pill {
+ border: 1px solid rgba(21, 87, 36, 0.22);
+ background: var(--colour-ok-bg);
+ color: var(--colour-ok-text);
+ border-radius: 10px;
+ padding: 10px 12px;
+ font-size: 14px;
+ font-weight: 600;
+ }
+
+ .muted { color: var(--colour-muted); font-size: 14px; margin: 0; }
+
+ pre {
+ margin: 12px 0 0;
+ background: #122019;
+ color: #d9f0de;
+ border-radius: 10px;
+ padding: 16px;
+ font-family: Consolas, Courier New, monospace;
+ font-size: 13px;
+ line-height: 1.42;
+ max-height: 62vh;
+ overflow: auto;
+ white-space: pre-wrap;
+ word-break: break-word;
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ }
+
+ .foot {
+ margin-top: 12px;
+ padding: 10px 12px;
+ border: 1px solid var(--colour-border);
+ border-radius: 10px;
+ background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 241, 232, 0.85));
+ color: #56635f;
+ font-size: 12px;
+ line-height: 1.4;
+ }
+
+ @media (max-width: 760px) {
+ body { padding: 16px; }
+ .meta { grid-template-columns: 1fr; }
+ header, section { padding: 18px; }
+ h1 { font-size: 24px; }
+ }
+ </style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <h1>GLA 6 Theme Park CRUD - Online Test Report</h1>
-      <div class="sub">Automated Node.js + SQLite execution artifact for portfolio demonstration.</div>
-    </header>
+ <main class=wrap>
+ <header>
+ <h1>GLA 6 Theme Park CRUD - Online Test Report</h1>
+ <div class=sub>Automated Node.js + SQLite execution artifact for portfolio demonstration.</div>
+ </header>
 
-    <section>
-      <p class="muted">Automated checks completed in CI workflow:</p>
-      <div class="meta">
-        <div class="pill">PASS: READ query returned ride records</div>
-        <div class="pill">PASS: CREATE inserted Galaxy Spinner</div>
-        <div class="pill">PASS: UPDATE modified Thunder Coaster duration</div>
-        <div class="pill">PASS: DELETE removed Haunted Mansion</div>
-      </div>
-    </section>
+ <section>
+ <p class=muted>Automated checks completed in CI workflow:</p>
+ <div class=meta>
+ <div class=pill>PASS: READ query returned ride records</div>
+ <div class=pill>PASS: CREATE inserted Galaxy Spinner</div>
+ <div class=pill>PASS: UPDATE modified Thunder Coaster duration</div>
+ <div class=pill>PASS: DELETE removed Haunted Mansion</div>
+ </div>
+ </section>
 
-    <section>
-      <p class="muted">Latest command output from <strong>node app.js</strong>:</p>
-      <pre id="output">Loading latest output...</pre>
-      <div class="foot" id="stamp">Generated by GitHub Actions after each push to portfolio-fork.</div>
-    </section>
-  </main>
+ <section>
+ <p class=muted>Latest command output from <strong>node app.js</strong>:</p>
+ <pre id=output>Loading latest output...</pre>
+ <div class=foot id=stamp>Generated by GitHub Actions after each push to portfolio-fork.</div>
+ </section>
+ </main>
 
-  <script>
-    async function loadOutput() {
-      const outputEl = document.getElementById('output');
-      const stampEl = document.getElementById('stamp');
-      try {
-        const [outputRes, stampRes] = await Promise.all([
-          fetch('./latest-output.txt', { cache: 'no-store' }),
-          fetch('./build-info.json', { cache: 'no-store' })
-        ]);
+ <script>
+ async function loadOutput() {
+ const outputEl = document.getElementById('output');
+ const stampEl = document.getElementById('stamp');
+ try {
+ const [outputRes, stampRes] = await Promise.all([
+ fetch('./latest-output.txt', { cache: 'no-store' }),
+ fetch('./build-info.json', { cache: 'no-store' })
+ ]);
 
-        const outputText = outputRes.ok
-          ? await outputRes.text()
-          : 'Output file not found yet. Trigger workflow by pushing to portfolio-fork.';
+ const outputText = outputRes.ok
+ ? await outputRes.text()
+ : 'Output file not found yet. Trigger workflow by pushing to portfolio-fork.';
 
-        outputEl.textContent = outputText.trim() || 'Output is empty.';
+ outputEl.textContent = outputText.trim() || 'Output is empty.';
 
-        if (stampRes.ok) {
-          const info = await stampRes.json();
-          stampEl.textContent = `Generated: ${info.generatedAt} | Commit: ${info.commit}`;
-        }
-      } catch (error) {
-        outputEl.textContent = `Could not load output: ${error.message}`;
-      }
-    }
+ if (stampRes.ok) {
+ const info = await stampRes.json();
+ stampEl.textContent = `Generated: ${info.generatedAt} | Commit: ${info.commit}`;
+ }
+ } catch (error) {
+ outputEl.textContent = `Could not load output: ${error.message}`;
+ }
+ }
 
-    loadOutput();
-  </script>
+ loadOutput();
+ </script>
 </body>
 </html>
